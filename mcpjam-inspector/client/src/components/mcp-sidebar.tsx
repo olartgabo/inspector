@@ -625,7 +625,7 @@ export function MCPSidebar({
       "sandboxes-enabled": !!sandboxesEnabled && isAuthenticated,
       "registry-enabled": registryEnabled === true,
       "mcpjam-conformance": conformanceEnabled === true,
-      "hosts-enabled": isPostHogBooleanFlagOn(hostsEnabled) && isAuthenticated,
+      "hosts-enabled": true, // TEMP local hack to show Clients link unauthenticated
       "home-page-enabled": homePageEnabled === true && isAuthenticated,
       "evaluate-ui": evaluateUiEnabled === true,
       xaa: xaaEnabled === true,

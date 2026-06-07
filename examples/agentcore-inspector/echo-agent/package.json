@@ -1,0 +1,22 @@
+{
+  "name": "agentcore-echo-agent",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Minimal echo agent for testing the AgentCore Inspector against a real AgentCore Runtime.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "deploy": "node deploy.mjs"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-bedrock-agentcore-control": "^3.864.0",
+    "@aws-sdk/client-iam": "^3.864.0",
+    "@aws-sdk/client-s3": "^3.864.0",
+    "@aws-sdk/client-sts": "^3.864.0",
+    "adm-zip": "^0.5.16"
+  }
+}

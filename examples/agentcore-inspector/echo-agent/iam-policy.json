@@ -1,0 +1,60 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AgentCoreAll",
+      "Effect": "Allow",
+      "Action": "bedrock-agentcore:*",
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3CodeDeploy",
+      "Effect": "Allow",
+      "Action": [
+        "s3:CreateBucket",
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:ListBucket",
+        "s3:GetBucketLocation",
+        "s3:PutLifecycleConfiguration"
+      ],
+      "Resource": [
+        "arn:aws:s3:::bedrock-agentcore-*",
+        "arn:aws:s3:::bedrock-agentcore-*/*"
+      ]
+    },
+    {
+      "Sid": "IAMExecutionRole",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "iam:GetRole",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:DeleteRole",
+        "iam:ListRolePolicies",
+        "iam:ListAttachedRolePolicies",
+        "iam:TagRole"
+      ],
+      "Resource": [
+        "arn:aws:iam::*:role/*BedrockAgentCore*",
+        "arn:aws:iam::*:role/service-role/*BedrockAgentCore*"
+      ]
+    },
+    {
+      "Sid": "IAMPassExecutionRole",
+      "Effect": "Allow",
+      "Action": ["iam:PassRole"],
+      "Resource": [
+        "arn:aws:iam::*:role/AmazonBedrockAgentCore*",
+        "arn:aws:iam::*:role/service-role/AmazonBedrockAgentCore*"
+      ]
+    },
+    {
+      "Sid": "IAMServiceLinkedRole",
+      "Effect": "Allow",
+      "Action": ["iam:CreateServiceLinkedRole"],
+      "Resource": "*"
+    }
+  ]
+}

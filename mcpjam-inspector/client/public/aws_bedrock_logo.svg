@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AWS Bedrock">
+  <path d="M24 3 6 13v22l18 10 18-10V13L24 3Z" fill="#232F3E"/>
+  <path d="M24 3 6 13l18 10 18-10L24 3Z" fill="#2E3C4D"/>
+  <path d="M24 23v22l18-10V13L24 23Z" fill="#1B2530"/>
+  <path d="M24 13.5 14 19v10l10 5.5L34 29V19l-10-5.5Z" fill="none" stroke="#FF9900" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="24" cy="24" r="3.2" fill="#FF9900"/>
+  <path d="M24 24 14 19M24 24l10-5M24 24v10.5" stroke="#FF9900" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

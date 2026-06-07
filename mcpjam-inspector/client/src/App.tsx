@@ -515,7 +515,7 @@ export function ServersRoute() {
     [navigate],
   );
 
-  if (!hostsHubFlagEnabled || !isAuthenticated) {
+  if (!hostsHubFlagEnabled) {
     return <ServersTabBody />;
   }
 
@@ -614,7 +614,7 @@ export function ClientsRoute() {
     [navigate],
   );
 
-  if (!hostsHubFlagEnabled || !isAuthenticated) {
+  if (!hostsHubFlagEnabled) {
     return <ServersTabBody />;
   }
 
@@ -644,7 +644,7 @@ export function HostCompareRoute() {
 
   // Mirror the gating ClientsRoute uses: when the hosts hub is off, Compare
   // has no peer Servers/Client tabs to switch to, so render bare.
-  if (!hostsHubFlagEnabled || !isAuthenticated) {
+  if (!hostsHubFlagEnabled) {
     return compareView;
   }
 
@@ -1161,7 +1161,7 @@ export default function App() {
   const registryEnabled = useFeatureFlagEnabled("registry-enabled");
   const conformanceEnabled = useFeatureFlagEnabled("mcpjam-conformance");
   const hostsEnabled = useFeatureFlagEnabled("hosts-enabled");
-  const hostsHubFlagEnabled = isPostHogBooleanFlagOn(hostsEnabled);
+  const hostsHubFlagEnabled = true; // TEMP local hack to view Clients hub unauthenticated
   const playgroundEnabled = useFeatureFlagEnabled("playground-enabled");
   const evaluateRunsEnabled = useFeatureFlagEnabled("evaluate-ci");
   const evaluateUiEnabled = useFeatureFlagEnabled("evaluate-ui");

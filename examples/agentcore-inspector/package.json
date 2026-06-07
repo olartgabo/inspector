@@ -1,0 +1,34 @@
+{
+  "name": "agentcore-inspector",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "MCP server that exposes AWS Bedrock AgentCore state (runtimes, memory, sessions, events) as MCP tools and resources.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcpjam/inspector",
+    "directory": "examples/agentcore-inspector"
+  },
+  "license": "MIT",
+  "main": "server.ts",
+  "files": [
+    "server.ts"
+  ],
+  "scripts": {
+    "start": "tsx server.ts --stdio",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-agentcore": "^3.864.0",
+    "@aws-sdk/client-bedrock-agentcore-control": "^3.864.0",
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.0"
+  }
+}
